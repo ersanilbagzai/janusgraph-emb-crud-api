@@ -1,0 +1,7 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: janusgraph-emb-crud-api
+
+graphPropertyFilePath: E:\Janus\apiCrud\src\main\resources\janusgraph-cql.properties
