@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "06dcbae8-12d3-48f7-9941-a80ea70ea093",
+		"_postman_id": "88ee5c2d-d498-4eaf-b583-d95c609ceded",
 		"name": "TechFramer Graph API's",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19982336"
+		"_exporter_id": "1561583"
 	},
 	"item": [
 		{
@@ -12,11 +12,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/echo",
+					"raw": "{{host_port}}/api/graph/echo",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -24,7 +23,53 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "echo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_port}}/api/graph/echo",
+							"host": [
+								"{{host_port}}"
+							],
+							"path": [
+								"api",
+								"graph",
+								"echo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Oct 2022 10:55:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "alive"
+				}
+			]
 		},
 		{
 			"name": "get Vertex By ID",
@@ -32,17 +77,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/v/id/8296",
+					"raw": "{{host_port}}/api/graph/v/id/4160",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
 						"v",
 						"id",
-						"8296"
+						"4160"
 					]
 				}
 			},
@@ -98,22 +142,91 @@
 			]
 		},
 		{
+			"name": "get Vertex By GiD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host_port}}/api/graph/v/gid/8f95addc-37d3-440b-8fe3-d24499874f5c",
+					"host": [
+						"{{host_port}}"
+					],
+					"path": [
+						"api",
+						"graph",
+						"v",
+						"gid",
+						"8f95addc-37d3-440b-8fe3-d24499874f5c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Vertex By GiD",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/graph/v/gid/c348ed57-6c83-4b00-8c5e-fa05447d1f00",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"graph",
+								"v",
+								"gid",
+								"c348ed57-6c83-4b00-8c5e-fa05447d1f00"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Sep 2022 07:08:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"label\": \"person\",\n    \"id\": 8296,\n    \"properties\": {\n        \"name\": \"sagar\"\n    },\n    \"gId\": \"c348ed57-6c83-4b00-8c5e-fa05447d1f00\",\n    \"objectId\": 8296,\n    \"stringId\": \"8296\"\n}"
+				}
+			]
+		},
+		{
 			"name": "get Edge By ID",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/v/id/8296",
+					"raw": "{{host_port}}/api/graph/e/id/2do-38g-74l-6d4",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
-						"v",
+						"e",
 						"id",
-						"8296"
+						"2do-38g-74l-6d4"
 					]
 				}
 			},
@@ -174,17 +287,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/v/id/8296",
+					"raw": "{{host_port}}/api/graph/e/gid/c1732922-4226-11ed-b878-0242ac120002",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
-						"v",
-						"id",
-						"8296"
+						"e",
+						"gid",
+						"c1732922-4226-11ed-b878-0242ac120002"
 					]
 				}
 			},
@@ -240,84 +352,13 @@
 			]
 		},
 		{
-			"name": "get Vertex By GiD",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/api/graph/v/id/8296",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"graph",
-						"v",
-						"id",
-						"8296"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "get Vertex By GiD",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/api/graph/v/gid/c348ed57-6c83-4b00-8c5e-fa05447d1f00",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"graph",
-								"v",
-								"gid",
-								"c348ed57-6c83-4b00-8c5e-fa05447d1f00"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 28 Sep 2022 07:08:55 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"label\": \"person\",\n    \"id\": 8296,\n    \"properties\": {\n        \"name\": \"sagar\"\n    },\n    \"gId\": \"c348ed57-6c83-4b00-8c5e-fa05447d1f00\",\n    \"objectId\": 8296,\n    \"stringId\": \"8296\"\n}"
-				}
-			]
-		},
-		{
 			"name": "1_add Vertex",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"label\":\"person\",\"properties\":{\"name\":\"sanil\"}}",
+					"raw": "{\"label\":\"person\",\"properties\":{\"name\":\"sanil1\"}}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -325,11 +366,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/v/add",
+					"raw": "{{host_port}}/api/graph/v/add",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -460,7 +500,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"label\": \"knows\",\r\n    \"properties\": {\r\n        \"weight\": 0.5\r\n    },\r\n    \"source\": {\r\n        \"gId\": \"0021c8fc-831a-40fe-b7a2-a93feec7afa1\"\r\n    },\r\n    \"target\": {\r\n        \"gId\": \"c348ed57-6c83-4b00-8c5e-fa05447d1f00\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"label\": \"knows\",\r\n    \"properties\": {\r\n        \"weight\": 0.5\r\n    },\r\n    \"source\": {\r\n        \"gId\": \"522724e6-ccd7-47a9-8f34-5a96401c3dd1\"\r\n    },\r\n    \"target\": {\r\n        \"gId\": \"8f95addc-37d3-440b-8fe3-d24499874f5c\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -468,11 +508,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/e/add",
+					"raw": "{{host_port}}/api/graph/e/add",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -547,7 +586,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"gId\": \"0021c8fc-831a-40fe-b7a2-a93feec7afa1\",\r\n    \"label\": \"person\",\r\n    \"properties\": {\r\n        \"name\": \"sanil\",\r\n        \"age\": 27\r\n    }\r\n}",
+					"raw": "{\r\n    \"gId\": \"8f95addc-37d3-440b-8fe3-d24499874f5c\",\r\n    \"label\": \"person\",\r\n    \"properties\": {\r\n        \"name\": \"saurabh\",\r\n        \"age\": 27\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -555,11 +594,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/v/patch/gid",
+					"raw": "{{host_port}}/api/graph/v/patch/gid",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -636,7 +674,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"4200\",\r\n    \"label\": \"person\",\r\n    \"properties\": {\r\n        \"name\": \"sanil\",\r\n        \"age\": 27\r\n    }\r\n}",
+					"raw": "{\r\n    \"id\": \"4256\",\r\n    \"label\": \"person\",\r\n    \"properties\": {\r\n        \"name\": \"sanil\",\r\n        \"age\": 27\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -644,11 +682,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/v/patch/id",
+					"raw": "{{host_port}}/api/graph/v/patch/id",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -725,7 +762,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"4200\",\r\n    \"label\": \"person\",\r\n    \"gId\":\"0021c8fc-831a-40fe-b7a2-a93feec7afa1\",\r\n    \"properties\": {\r\n        \"name\": \"sanil\",\r\n        \"age\": 27\r\n    }\r\n}",
+					"raw": "{\r\n    \"id\": \"4256\",\r\n    \"label\": \"person\",\r\n    \"gId\":\"8f95addc-37d3-440b-8fe3-d24499874f5c\",\r\n    \"properties\": {\r\n        \"name\": \"sanil\",\r\n        \"age\": 27\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -733,11 +770,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/v/replace/id",
+					"raw": "{{host_port}}/api/graph/v/replace/id",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -814,7 +850,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"4200\",\r\n    \"label\": \"person\",\r\n    \"gId\":\"0021c8fc-831a-40fe-b7a2-a93feec7afa1\",\r\n    \"properties\": {\r\n        \"name\": \"sanil\",\r\n        \"age\": 27\r\n    }\r\n}",
+					"raw": "{\r\n    \"id\": \"4256\",\r\n    \"label\": \"person\",\r\n    \"gId\":\"8f95addc-37d3-440b-8fe3-d24499874f5c\",\r\n    \"properties\": {\r\n        \"name\": \"sanil\",\r\n        \"age\": 37\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -822,11 +858,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/v/replace/gid",
+					"raw": "{{host_port}}/api/graph/v/replace/gid",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -911,11 +946,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/e/patch/gid",
+					"raw": "{{host_port}}/api/graph/e/patch/gid",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1000,11 +1034,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/e/patch/id",
+					"raw": "{{host_port}}/api/graph/e/patch/id",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1089,11 +1122,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/e/replace/id",
+					"raw": "{{host_port}}/api/graph/e/replace/id",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1178,11 +1210,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/graph/e/replace/id",
+					"raw": "{{host_port}}/api/graph/e/replace/id",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1258,11 +1289,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/e/drop/gid/e15abed0-79ce-46a6-b695-65abc4be47b5",
+					"raw": "{{host_port}}/api/graph/e/drop/gid/e15abed0-79ce-46a6-b695-65abc4be47b5",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1331,11 +1361,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/e/drop/id/odxcd-38o-4r9-6eg",
+					"raw": "{{host_port}}/api/graph/e/drop/id/odxcd-38o-4r9-6eg",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1404,11 +1433,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/v/drop/id/8296",
+					"raw": "{{host_port}}/api/graph/v/drop/id/8296",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1427,11 +1455,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/graph/v/drop/id/8296",
+					"raw": "{{host_port}}/api/graph/v/drop/id/8296",
 					"host": [
-						"localhost"
+						"{{host_port}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"graph",
@@ -1443,6 +1470,26 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
